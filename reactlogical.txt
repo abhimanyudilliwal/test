@@ -1,0 +1,71 @@
+1:-
+var arr= [5,7,5,8,94,8,9,0,4]
+var i;
+var arr1=[]
+for(i=0;i<=arr.length;i++)
+{
+if(arr[i]%2 === 0){
+  arr1.push(arr[i])
+}
+}
+console.log(arr1)
+
+
+
+2:--
+var nums=[0,0,0,0,1,1,0,0,1,1,1,1,0,0]
+
+   
+    let Countl = 0;
+    let Countc = 0;
+    for (let i = 0; i<nums.length; i++) {
+        if (nums[i] === 0) {
+           Countc = 0;
+        } else {
+            Countc++;
+        };
+        if (Countc > Countl)Countl = Countc;
+    };
+   console.log(Countl)
+
+3:-
+const Array = [0,1,2,3,4,5,6,7,7,8,9,10]
+
+let duplicates = []
+
+const tempArray = [...Array].sort()
+
+for (let i = 0; i < tempArray.length; i++) {
+  if (tempArray[i + 1] === tempArray[i]) {
+    duplicates.push(tempArray[i])
+  }
+}
+
+console.log(duplicates)
+
+
+4:-
+  var dict = {
+       'id' : 4, 'name' : 'abc',
+ 'id2': 10, 'name' : 'ab2',
+ 'id3' : 5, 'name' : 'abc3',
+ 'id4' : 6, 'name' : 'abc5',
+    };
+
+    var keys = [];
+    for(var key in dict) { 
+       keys[keys.length] = key;
+     }
+
+     var values = [];     
+     for(var i = 0; i < keys.length; i++) {
+         values[values.length] = dict[keys [i]];
+     }
+
+     var sortedValues = values.sort(sortNumber);
+     console.log(sortedValues);
+
+
+function sortNumber(a,b) {
+   return a - b;
+}
